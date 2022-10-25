@@ -1,0 +1,7 @@
+.click {
+  color: white !important;
+}
+
+.click:focus {
+  color: yellow !important;
+}

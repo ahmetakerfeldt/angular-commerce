@@ -1,0 +1,16 @@
+<div class="row m-0 justify-content-center">
+  <div class="card bg-transparent mx-2 my-2 animate__flash image-wrappers"
+       style="width: 400px; border: 1px solid rgb(45, 45, 45)">
+    <div class="card-body card-img-top">
+      <form [formGroup]="RegisterForm" class="justify-content-center">
+        <p class="fas fa-user icon-style animate__bounceIn" style="color: gray"></p>
+        <input placeholder="Username" class="input-style-1 animate__bounceIn" formControlName="username">
+        <p class="fas fa-lock icon-style animate__bounceIn" style="color: gray"></p>
+        <input placeholder="Password" class="input-style-2 animate__bounceIn" type="password" formControlName="password">
+        <button class="button-styles" (click)="register()" [disabled]="!RegisterForm.valid">Register</button>
+        <p *ngIf="registerConfirm" class="successful-text animate__bounceIn my-2">You have successfully registered!</p>
+        <p *ngIf="alreadyExist" class="unsuccessful-text animate__bounceIn my-2">This username is already taken!</p>
+      </form>
+    </div>
+  </div>
+</div>

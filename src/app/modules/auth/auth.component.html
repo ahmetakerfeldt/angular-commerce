@@ -1,0 +1,20 @@
+<div style="margin-top: 80px">
+  <h1 style="text-align: center; color: white"><i><b> <i style="color: chocolate">E</i>-Commerce App <i
+    class="fa-solid fa-chart-simple"></i></b></i></h1>
+  <div class="row m-0 justify-content-center" style="">
+    <div class=" bg-transparent  animate__flash"
+         style="width: 425px; border: 1px solid rgb(29, 29, 29)">
+      <div style="display: flex; margin-top: 40px">
+
+        <button class="button-style" routerLink="/login">Login</button>
+        <button (click)="info()" class="btn btn-dark button-style"
+                style="background-color: rgb(29, 29, 29) !important; border: 1px solid rgb(29, 29, 29) !important;"><i
+          class="fa-solid fa-info"
+        ></i>
+        </button>
+        <button class="button-style" routerLink="/register">Register</button>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

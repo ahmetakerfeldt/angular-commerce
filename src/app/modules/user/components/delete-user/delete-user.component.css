@@ -1,0 +1,33 @@
+.input-group-style {
+  width: 97%;
+  height: 40px;
+  margin-top: 10px;
+  border: 1px solid gray;
+  background-color: rgb(35, 35, 35);
+  color: white;
+  border-radius: 5px;
+  font-style: initial;
+}
+
+.input-group-style:focus {
+
+  border-bottom-color: darkblue;
+}
+
+.send-button-delete {
+  width: 97%;
+  height: 40px;
+  margin-top: 10px;
+  border: 1px solid rgb(45, 45, 45);
+  background-color: rgb(175, 0, 0);
+  color: white;
+  border-radius: 5px;
+}
+
+.send-button-delete:hover {
+  background-color: rgb(125, 0, 0);
+}
+
+.send-button-delete:disabled {
+  background-color: rgb(45, 45, 45);
+}

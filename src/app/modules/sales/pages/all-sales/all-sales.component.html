@@ -1,0 +1,43 @@
+<ng-template [ngIf]="!loading" [ngIfElse]="loadingContainer">
+  <div class="row m-0 justify-content-center">
+    <div class="card bg-dark mx-2 my-2 animate__flash image-wrappers" *ngFor="let selling of sellingItem"
+         style="width: 250px">
+
+      <div class="card-img-top">
+        <img class="card-img" style="border-radius: 5px; width: 220px; height: 130px" src="{{selling.url}}"
+             alt="Card image cap">
+      </div>
+      <div class="card-body card-img-top">
+        <h6 class="card-title" style="color: white; ">Price: <i style="color: greenyellow"><b>{{selling.price}}$</b></i></h6>
+        <h6 style="margin-top: -4px; color: white">Explanation:</h6>
+        <h6 style="color: navajowhite;text-align: center; font-size: 10px">{{selling.explanation}}</h6>
+        <h6 *ngIf="sameUser" style="color:red">You cannot buy your item!</h6>
+      </div>
+      <div class="card-footer">
+        <a href="javascript:;" class="btn btn-warning align-content-lg-center" style="margin-left: 50px"
+           (click)="buyItem(selling.url, selling.price, selling.explanation)">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #loadingContainer>
+  <div class="spinner-border text-success spinner" role="status">
+    <span class="sr-only spinner">Loading...</span>
+  </div>
+</ng-template>
+
+<div *ngIf="allSellingEmpty" class="row m-0 justify-content-center" style="margin-top: 160px !important;">
+  <div class="col-3 justify-content-center">
+    <div>
+      <h1 class="text-danger" style="text-align: center; font-size: 25px"><b>No one has posted yet!</b></h1>
+      <h3 style="text-align: center; color: chartreuse"><i>Be the first to post!</i></h3>
+      <h6 style="text-align: center; color: white">(Your sale may appear at the top of the list.)</h6>
+      <h1 style="text-align: center; font-size: 25px; color: white"><b>
+        <i class="fa-solid fa-arrow-down"></i></b></h1>
+      <button class="send-button btn-lg py-2" routerLink="/sale-item">Click to sell anything <i class="fas fa- fa-dollar-sign"
+                                                                       style="color: forestgreen"></i></button>
+    </div>
+  </div>
+</div>
+

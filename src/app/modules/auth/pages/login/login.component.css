@@ -1,0 +1,75 @@
+.input-style-1 {
+  width: 100%;
+  height: 40px;
+  margin-top: -10px;
+  border: 1px solid rgb(45, 45, 45);
+  border-radius: 3px;
+  background-color: rgb(35, 35, 35);
+  color: white;
+}
+
+.input-style-2 {
+  width: 100%;
+  height: 40px;
+  margin-top: -10px;
+  border: 1px solid rgb(45, 45, 45);
+  border-radius: 3px;
+  background-color: rgb(35, 35, 35);
+  color: white;
+
+}
+
+.input-style-1:focus {
+
+  border: gray;
+
+}
+
+.input-style-1::placeholder {
+  color: darkgrey;
+}
+
+.input-style-2:focus {
+  border-color: black;
+}
+
+.input-style-2::placeholder {
+  color: darkgrey;
+}
+
+.button-styles {
+
+  width: 100%;
+  background-color: rgb(39, 39, 39);
+  border: 1px solid rgb(29, 29, 29);
+  height: 40px;
+  margin-top: 25px;
+  border-radius: 3px;
+  color: white;
+  font-family: "sans-serif";
+  font-size: 18px;
+}
+
+.button-styles:hover {
+  background-color: rgb(31, 31, 31);
+}
+
+.button-styles:disabled {
+  background-color: rgb(55, 55, 55);
+}
+
+
+.icon-style {
+
+  color: white;
+}
+
+.not-found {
+  width: 100%;
+  color: red;
+  margin-top: 10px;
+}
+
+.button-style:disabled {
+  background-color: cadetblue;
+}

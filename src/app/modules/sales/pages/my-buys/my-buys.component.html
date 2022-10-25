@@ -1,0 +1,31 @@
+<div class="row m-0 justify-content-center">
+  <div class="card bg-dark mx-2 my-2 animate__flash image-wrappers" *ngFor="let buy of activeUserBuys"
+       style="width: 250px">
+    <div class="card-img-top">
+      <img class="card-img" style="border-radius: 5px; width: 220px; height: 130px" src="{{buy.url}}"
+           alt="Card image cap">
+    </div>
+    <div class="card-body card-img-top">
+      <h6 class="card-title" style="color: white; ">Price: <i style="color: greenyellow"><b>{{buy.price}}$</b></i></h6>
+      <h6 style="margin-top: -4px; color: white">Explanation:</h6>
+      <h6 style="color: navajowhite;text-align: center; font-size: 10px">{{buy.explanation}}</h6>
+      <h5 style="color: lawngreen; text-align: center">(You bought this!)</h5>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="emptyBuys" class="row m-0 justify-content-center" style="margin-top: 160px !important;">
+  <div class="col-3 justify-content-center">
+    <div>
+      <h1 class="text-danger" style="text-align: center; font-size: 25px"><b>
+        You haven't bought anything yet</b></h1>
+      <h1 style="text-align: center; font-size: 25px; color: white"><b>
+        <i class="fa-solid fa-arrow-down"></i></b></h1>
+
+
+      <button class="send-button btn-lg" routerLink="/all-sales">Click to buy anything <i class="fas fa- fa-money-bill-1-wave"
+                                                                                    style="color: forestgreen"></i></button>
+    </div>
+  </div>
+</div>
+

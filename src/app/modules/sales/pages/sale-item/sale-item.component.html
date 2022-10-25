@@ -1,0 +1,17 @@
+<div class="row m-0 h-100 justify-content-center" style="margin-top: 150px !important;">
+  <div class="col-12 col-lg-3 col-xl-3 col-md-6 col-sm-8">
+    <form class="card bg-transparent border-0">
+      <div class="card-body">
+        <form [formGroup]="inputForm" class="mx-3">
+          <input placeholder="Paste your picture URL" class="input-group-style" formControlName="url">
+          <input placeholder="Price($)" class="input-group-style" formControlName="price">
+          <input placeholder="Explanation" class="input-group-style" formControlName="explanation">
+          <button class="send-button"
+                  [disabled]="!inputForm.valid" (click)="Sell()">Sell Item <i class="fas fa- fa-dollar-sign" style="color: forestgreen"></i>
+          </button>
+          <p style="text-align: center; color: white; margin-top: 5px; width: 100%">(Fill in the blanks.)</p>
+        </form>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="d-flex px-3 py-3">
+  <button class="btn btn-dark" style="background-color: rgb(45, 45, 45) !important;" routerLink="/user/settings"><i
+    class="fa-solid fa-arrow-left"></i></button>
+</div>
+<div class="row m-0 justify-content-center h-100">
+  <div class="col-12 col-lg-3 col-xl-3 col-md-6 col-sm-8">
+    <form class="card bg-dark border-0">
+      <div class="card-header">
+        <h6 class="card-title text-danger">
+          <h5 class="mx-4" style="color: white">Your current username: <i style="color: aqua"><b>{{username}}</b></i>
+          </h5>
+        </h6>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="inputForm" class="mx-4">
+          <input formControlName="newUsername" class="input-group-style" placeholder="New Username">
+          <input formControlName="confirm" class="input-group-style" placeholder="Confirm the transaction"
+                 style="color: forestgreen">
+          <p class="mx-2 my-2" style="color: white; font-size: 14px">(You should write <i
+            style="color: forestgreen"><b>"CONFIRM"</b></i>
+            in the box.)</p>
+          <p *ngIf="usernameAlreadyExist" style="text-align: center; color: red" class="animate__bounceIn my-2">Username already taken!</p>
+          <p *ngIf="sameUsername" style="text-align: center; color: red" class="animate__bounceIn my-2">That's your username anyway!</p>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button class="send-button mx-4" [disabled]="!inputForm.valid" (click)="changeUsername()">Change Username <i
+          class="fa-solid fa-shuffle"
+          style="color: forestgreen"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,37 @@
+<div class="d-flex px-3 py-3">
+  <button class="btn btn-dark" style="background-color: rgb(45, 45, 45) !important;" routerLink="/user/settings"><i
+    class="fa-solid fa-arrow-left"></i></button>
+</div>
+
+<div class="row m-0 h-100 justify-content-center">
+  <div class="col-12 col-lg-3 col-xl-3 col-md-6 col-sm-8">
+    <form class="card bg-dark border-0">
+      <div class="card-header">
+
+        <p class="text-danger mx-4" style="font-size: 12px"><b>!WARNING!</b></p>
+        <p class="text-danger mx-4" style="font-size: 14px"><b>YOU CANNOT UNDO THE TRANSACTİON AND ALL YOUR SALES WILL
+          BE DELETED!</b></p>
+      </div>
+      <div class="card-body mx-2">
+        <form [formGroup]="inputForm" class="mx-3">
+          <input formControlName="reason" class="input-group-style" placeholder="Enter your reason">
+          <input formControlName="password" class="input-group-style" placeholder="Enter your password" type="password">
+          <input formControlName="confirms" class="input-group-style" placeholder="Confirm the transaction"
+                 style="color: forestgreen">
+          <p class="mx-2 my-2" style="color: white; font-size: 14px">(You should write <i
+            style="color: forestgreen"><b>"CONFIRM"</b></i>
+            in the box.)</p>
+          <p *ngIf="notTruePassword" style="text-align: center"><i style="color: red"><b>X</b></i><b style="color: red; font-size: 13px">
+            Password is incorrect!</b></p>
+        </form>
+        <div class="card-footer">
+          <button class="send-button-delete" [disabled]="!inputForm.valid" (click)="deleteAccount()">Delete Account <i
+            class="fa-solid fa-trash"
+            style="color: black"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+

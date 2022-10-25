@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: white; margin-left: 10px"><b style="color: yellow"><i>E-Commerce</i></b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link click" aria-current="page" href="javascript:;" style="margin-left: 10px"
+             routerLink="/all-sales">All Sales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link click" href="javascript:;" style="margin-left: 10px" routerLink="/sale-item">Sale
+            Item</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link click" href="javascript:;" style="margin-left: 10px" routerLink="/my-sales">My
+            Sales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link click" href="javascript:;" style="margin-left: 10px" routerLink="/my-buys">My
+            Buys</a>
+        </li>
+      </ul>
+      <form class="d-flex nav-item" role="search">
+        <p class="my-1" style="color: yellow; margin-right: 20px"><b><i class="fa-solid fa-calendar-days"></i>({{date|date}})</b></p>
+        <i style="color: lawngreen; margin-top: 5px; margin-right: 25px"><i class="fas fa-circle-check"
+                                                                            style="color: lawngreen"></i> Status: Active <i style="color: aqua">({{username}})</i></i>
+        <a class="nav-link click" style="margin-right: 25px; margin-top: 5px" routerLink="/user/settings"><i
+          class="fas fa-cog"></i> Settings</a>
+        <button (click)="logOut()" class="btn btn-danger"><i class="fas fa-sign-out"></i></button>
+      </form>
+    </div>
+  </div>
+</nav>
