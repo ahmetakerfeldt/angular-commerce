@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://commerage-9b78d-default-rtdb.europe-west1.firebasedatabase.app'
+  apiUrl: 'https://commerce-2ca42-default-rtdb.europe-west1.firebasedatabase.app'
 };
 
 /*
