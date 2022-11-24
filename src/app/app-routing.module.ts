@@ -7,6 +7,12 @@ const routes: Routes = [
     path: "",
     loadChildren: () => import("./modules/auth/auth.module").then((module) => module.AuthModule)
   },
+
+  {
+    path: "",
+    loadChildren: () => import("./modules/delete/delete.module").then((module)=> module.DeleteModule)
+  },
+
   {
     path: '',
     component: DefaultLayoutComponent,
