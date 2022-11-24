@@ -4,6 +4,10 @@ import {DefaultLayoutComponent} from "./layouts/default-layout/default-layout.co
 
 const routes: Routes = [
   {
+    path:'', redirectTo: 'login', pathMatch: 'full'
+  },
+
+  {
     path: "",
     loadChildren: () => import("./modules/auth/auth.module").then((module) => module.AuthModule)
   },
