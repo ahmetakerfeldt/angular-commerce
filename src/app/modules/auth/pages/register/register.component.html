@@ -10,6 +10,13 @@
         <button class="button-styles" (click)="register()" [disabled]="!RegisterForm.valid">Register</button>
         <p *ngIf="registerConfirm" class="successful-text animate__bounceIn my-2">You have successfully registered!</p>
         <p *ngIf="alreadyExist" class="unsuccessful-text animate__bounceIn my-2">This username is already taken!</p>
+        <div class="text-center">
+          <button (click)="info()" class="btn btn-dark button-style "
+                  style="background-color: rgb(29, 29, 29) !important; border: 1px solid rgb(29, 29, 29) !important;"><i
+            class="fa-solid fa-info"
+          ></i>
+          </button>
+        </div>
       </form>
     </div>
   </div>
