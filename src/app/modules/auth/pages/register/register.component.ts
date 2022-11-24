@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
 import {AuthService} from "../../services/auth.service";
+import Swal from "sweetalert2";
 
 @Component({
   selector: 'app-register',
@@ -14,8 +15,8 @@ export class RegisterComponent implements OnInit {
   alreadyExist = ""
   registerConfirm = ""
   RegisterForm = this.fb.group({
-    username: ["", Validators.required],
-    password: ["", Validators.required],
+    username: ["", [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+    password: ["", [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
   })
 
   constructor(private fb: FormBuilder, private authService: AuthService) {
@@ -48,5 +49,16 @@ export class RegisterComponent implements OnInit {
 
       await this.authService.register(this.RegisterForm.value.username, this.RegisterForm.value.password, this.unnecessary, this.unnecessary)
     }
+  }
+
+  async info() {
+    await Swal.fire({
+      color: 'white',
+      background: 'rgb(29, 29, 29)',
+      text: 'To register, the username' +
+        ' and password length must be' +
+        ' 5-10 characters long.',
+
+    })
   }
 }
