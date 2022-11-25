@@ -1,8 +1,7 @@
 .input-style-1 {
   width: 100%;
   height: 40px;
-  margin-top: -10px;
-  border: 1px solid rgb(45, 45, 45);
+  border: none;
   border-radius: 3px;
   background-color: rgb(35, 35, 35);
   color: white;
@@ -11,8 +10,8 @@
 .input-style-2 {
   width: 100%;
   height: 40px;
-  margin-top: -10px;
-  border: 1px solid rgb(45, 45, 45);
+  margin-top: -1px;
+  border: none;
   border-radius: 3px;
   background-color: rgb(35, 35, 35);
   color: white;
@@ -20,9 +19,7 @@
 }
 
 .input-style-1:focus {
-
-  border: gray;
-
+  outline: none;
 }
 
 .input-style-1::placeholder {
@@ -30,7 +27,7 @@
 }
 
 .input-style-2:focus {
-  border-color: black;
+  outline: none;
 }
 
 .input-style-2::placeholder {
@@ -72,4 +69,21 @@
 
 .button-style:disabled {
   background-color: cadetblue;
+}
+
+.button-styles-secret {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(35, 35, 35);
+  color: white;
+}
+
+.input-style-3 {
+  width: 100%;
+  height: 42px;
+  border: 1px solid rgb(55, 55, 55);
+  border-radius: 3px;
+  color: white;
 }
