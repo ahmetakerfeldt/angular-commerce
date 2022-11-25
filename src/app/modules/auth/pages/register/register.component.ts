@@ -10,6 +10,8 @@ import Swal from "sweetalert2";
 })
 export class RegisterComponent implements OnInit {
 
+  eyesOpen = false
+  eyesClose = true
   unnecessary: any = [0]
   userList = this.authService.usersList
   alreadyExist = ""
@@ -60,5 +62,15 @@ export class RegisterComponent implements OnInit {
         ' 5-10 characters long.',
 
     })
+  }
+
+  eyeOpen() {
+    this.eyesOpen = false
+    this.eyesClose = true
+  }
+
+  eyeClose() {
+    this.eyesOpen = true
+    this.eyesClose = false
   }
 }
