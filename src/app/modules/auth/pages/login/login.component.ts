@@ -11,6 +11,9 @@ import {SalesService} from "../../../sales/services/sales.service";
 })
 export class LoginComponent implements OnInit {
 
+  eyesOpen = false
+  eyesClose = true
+
   activeUserKey: any = this.salesService.activeUserKey
   loginGroup = this.fb.group({
     username: ["", Validators.required],
@@ -47,5 +50,15 @@ export class LoginComponent implements OnInit {
     this.activeUserKey = activeUserFinder[userIndex];
     await this.authService.postKey(this.activeUserKey)
     return this.router.navigate(['/all-sales'])
+  }
+
+  eyeOpen() {
+    this.eyesOpen = false
+    this.eyesClose = true
+  }
+
+  eyeClose() {
+    this.eyesOpen = true
+    this.eyesClose = false
   }
 }
