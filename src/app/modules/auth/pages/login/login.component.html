@@ -4,9 +4,26 @@
     <div class="card-body card-img-top">
       <form [formGroup]="loginGroup" class="justify-content-center">
         <p class="fas fa-user icon-style animate__bounceIn" style="color: gray"></p>
-        <input placeholder="Username" class="input-style-1 animate__bounceIn" formControlName="username">
+        <div class="input-style-3">
+          <input placeholder="Username" class="input-style-1" formControlName="username">
+        </div>
         <p class="fas fa-lock icon-style animate__bounceIn" style="color: gray"></p>
-        <input placeholder="Password" class="input-style-2 animate__bounceIn" type="password" formControlName="password">
+
+
+        <div class="col-12 input-style-3" *ngIf="eyesOpen">
+          <input placeholder="Password" class="input-style-2"
+                 formControlName="password" style="width: 90%">
+          <button class="button-styles-secret" (click)="eyeOpen()"
+                  style="width: 10%"><i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+        <div class="col-12 input-style-3" *ngIf="eyesClose">
+          <input placeholder="Password" class="input-style-2" type="password"
+                 formControlName="password" style="width: 90%">
+          <button class="button-styles-secret" (click)="eyeClose()"
+                  style="width: 10%"><i class="fa-regular fa-eye-slash"></i>
+          </button>
+        </div>
         <button class="button-styles" (click)="loginControl()" [disabled]="!loginGroup.valid">Login</button>
         <p *ngIf="notFound" class="not-found animate__bounceIn my-2" style="text-align: center">Users not found!</p>
       </form>
